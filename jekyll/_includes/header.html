@@ -1,9 +1,30 @@
-<header>
-  <nav>
-    <ul>
-      {% for(item in include.nav) %}
-        <li {% if item.name == page.name %}class="active"{% endif %}><a href="{{page.rootPath}}{{item.href}}">{{item.label}}</a></li>
-      {% endfor %}
-    </ul> 
-  </nav>
-</header>
+<div class="navbar-wrapper">
+  <div class="container">
+
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="/assets/images/logo.jpg" alt="">BeautyShop</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li {% if page.section == "home"%} class="active" {% endif%}><a href="/">Home</a></li>
+            <li {% if page.section == "packages"%} class="active" {% endif%}><a href="/packages/">Packages</a></li>
+            <li {% if page.section == "team"%} class="active" {% endif%}><a href="/team/">Our Team</a></li>
+            <li {% if page.section == "gallery"%} class="active" {% endif%}><a href="/gallery/">Gallery</a></li>
+            <li {% if page.section == "review"%} class="active" {% endif%}><a href="/review/">Review</a></li>
+            <li {% if page.section == "special"%} class="active" {% endif%}><a href="/special/">Special</a></li>
+            <li {% if page.section == "process"%} class="active" {% endif%}><a href="/process/">Our Process</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

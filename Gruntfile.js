@@ -89,9 +89,9 @@ module.exports = function(grunt) {
         files: [
           { 
             expand: true, 
-            cwd: './assets/img', 
+            cwd: './assets/images', 
             src: ['./**/*.*'], 
-            dest: 'jekyll/assets/vendors/' 
+            dest: 'jekyll/assets/images/' 
           }
         ]
       }
