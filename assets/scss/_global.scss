@@ -7,9 +7,47 @@ body {
   color: #5a5a5a;
 	font-family:'Camphor W01 Thin';
 }
+h1, h2{
+	padding:10px;
+}
+	.navbar-wrapper {
+  	.navbar-collapse {
+  		li{
+  			a{
+  				color:#333;
+  			}
+  			&.active{
+  				background-color: #e9e9e9;
+  			}
+  		}
+  	}
+	}
+.navbar-brand{
+	padding:5px;
+	img{
+		width: 40px;
+		margin-right: 8px;
+		float:left;
+		display: block;
+	}
+	.text{
+		float:left;
+		margin-top:10px;
+		.baseline{
+			font-family:'Camphor W01 Regular';
+			color:#565656;
+			font-size:12px;
+		}
+		.title{
+			font-family:'Camphor W01 Regular';
+			color:#323232;
+		}
+	}
+}
 
-
-
+.icon-bar{
+	background-color: #333;
+}
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
@@ -30,6 +68,7 @@ body {
 .navbar-wrapper .navbar {
   padding-right: 15px;
   padding-left: 15px;
+  background-color:#f2f2f2;
 }
 
 
@@ -43,14 +82,29 @@ body {
   margin-top: 50px;
 }
 /* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
+.home{
+	.carousel-caption {
+	  z-index: 10;
+	  display: table-cell;
+		vertical-align: middle;
+	  height: 300px;
+	  margin-top:-150px;
+	  top:50%;
+	  .vertical_space{
+	  	height:60px;
+	  }
+	}
+}
+.hero{
+	.carousel{
+		margin-bottom:60px;
+	}
 }
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 300px;
-  background-color: #777;
+  background-color: #000;
   overflow: hidden;
 }
 .carousel-inner > .item > img {
@@ -93,7 +147,7 @@ body {
 ------------------------- */
 
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  margin: 20px 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
@@ -101,6 +155,12 @@ body {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -1px;
+}
+.col-sm-4{
+	.img-circle{
+		width:240px !important;
+		margin-bottom:10px;
+	}
 }
 
 @media (min-width: 500px) {
@@ -121,10 +181,66 @@ body {
 	margin: 40px 0;
 }
 
+.padded{
+	padding-left:20px;
+	padding-right:20px;
+}
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
+	.btn-warning{
+		font-size: 50px;
+	}
+	.featurette-divider {
+	  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+	}
+
+	.navbar-wrapper {
+	  position: static;
+  	background-color:#f2f2f2;
+  	margin-top:0;
+  	height:135px;
+  	.navbar-collapse {
+  		margin-top:92px;
+  		margin-left:109px;
+  		li{
+  			border-radius:4px;
+  			a{
+  				color:#333;
+  				font-size: 12px;
+  				padding-top: 8px;
+					padding-bottom: 8px;
+  			}
+  			&.active{
+  				background-color: #e9e9e9;
+  			}
+  		}
+  	}
+	}
+
+	.navbar-brand{
+		padding:15px;
+		img{
+			width: 80px;
+			margin-left: 8px;
+			float:none;
+			display: block;
+		}
+		.text{
+			float:none;
+			margin-top:4px;
+			.baseline{
+				font-family:'Camphor W01 Regular';
+				color:#565656;
+				font-size:12px;
+			}
+			.title{
+				font-family:'Camphor W01 Regular';
+				color:#323232;
+			}
+		}
+	}
 
 	.carousel-inner > .item > img {
 	  position: absolute;
@@ -141,9 +257,6 @@ body {
   }
 
   /* Navbar positioning foo */
-  .navbar-wrapper {
-    margin-top: 20px;
-  }
   .navbar-wrapper .container {
     padding-right: 15px;
     padding-left:  15px;
@@ -179,15 +292,58 @@ body {
 	/* Declare heights because of positioning of img element */
 	.carousel .item {
 	  height: 450px;
-	  background-color: #777;
+	  background-color: #000;
 	}
 
 	.carousel-inner > .item > img {
 	 		max-width:100%;
 	}
+
+	.home{
+		.carousel-caption {
+	  	h1{
+				font-family:'Camphor W01 Regular';
+	  		font-size: 70px; 
+	  	}
+		  height: 500px;
+		  margin-top:-250px;
+		  .vertical_space{
+		  	height:160px;
+		  }
+		  .small_vertical_space{
+		  	height:80px;
+		  }
+		}
+	}
+	.package{
+		.carousel {
+			margin-bottom:0;
+		}
+		.carousel-caption {
+			max-width: 400px;
+			top: 20px;
+			bottom:auto;
+			text-align: left;
+		}
+	}
+	.hero{
+		.carousel{
+			margin-bottom:60px;
+		}
+	}
+
 }
 
 @media (min-width: 992px) {
+	.navbar-wrapper {
+  	.navbar-collapse {
+  		li{
+  			a{
+  				font-size: 16px
+  			}
+  		}
+  	}
+  }
   .featurette-heading {
     margin-top: 120px;
   }
@@ -201,6 +357,6 @@ body {
 	/* Declare heights because of positioning of img element */
 	.carousel .item {
 	  height: 500px;
-	  background-color: #777;
+	  background-color: #000;
 	}
 }
