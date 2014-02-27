@@ -3,7 +3,6 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-bottom: 40px;
   color: #5a5a5a;
 	font-family:'Camphor W01 Thin';
 }
@@ -117,6 +116,15 @@ h1, h2{
 }
 
 
+	.package{
+		.carousel {
+			margin-bottom:0;
+			margin-top:0;
+			img{
+				opacity:0.75;
+			}
+		}
+	}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -147,7 +155,7 @@ h1, h2{
 ------------------------- */
 
 .featurette-divider {
-  margin: 20px 0; /* Space out the Bootstrap <hr> more */
+  margin: 30px 0 20px; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
@@ -193,7 +201,7 @@ h1, h2{
 		font-size: 50px;
 	}
 	.featurette-divider {
-	  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+	  margin: 60px 0 40px; /* Space out the Bootstrap <hr> more */
 	}
 
 	.navbar-wrapper {
